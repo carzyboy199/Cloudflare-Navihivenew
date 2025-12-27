@@ -1,0 +1,30 @@
+/**
+* 有关如何配置 Wrangler 的更多详细信息，请参阅：
+* https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+"$schema": "node_modules/wrangler/config-schema.json",
+"name": "navihive",
+“main”: “worker/index.ts”
+"compatibility_date": "2025-04-05",
+"资产": {
+"not_found_handling": "单页应用程序"
+    },
+可观测性：{
+“启用”：真
+    },
+// D1 数据库绑定
+"d1_databases": [
+        {
+"绑定": "数据库",
+"database_name": "navigation-db-local",
+"database_id": "43ff28e1-42d6-4e53-9657-0702ae1353b6"
+        }
+],
+"vars": {
+"AUTH_ENABLED": "true",
+"AUTH_USERNAME": "linuxdo",
+"AUTH_PASSWORD": "linuxdo",
+"AUTH_SECRET": "linuxdo"
+    }
+}
